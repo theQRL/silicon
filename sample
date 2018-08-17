@@ -1,0 +1,7 @@
+z = 1
+a = z + 5
+
+if (a>=5)
+    hello = 25
+else
+    bye = 58.62
