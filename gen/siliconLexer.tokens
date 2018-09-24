@@ -1,0 +1,6 @@
+Number=1
+Identifier=2
+BinaryOp=3
+AssignmentOp=4
+WS=5
+'='=4
