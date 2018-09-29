@@ -3,9 +3,9 @@ import antlr4
 from gen.siliconLexer import siliconLexer
 from gen.siliconParser import siliconParser
 
-from Parser.Scope import Scope
-from Parser.AST.Visitor import Visitor
-from Parser.SymbolVisitor import SymbolVisitor
+from parser.Scope import Scope
+from parser.ast.Visitor import Visitor
+from parser.SymbolVisitor import SymbolVisitor
 
 
 code = antlr4.FileStream("sample.sil")

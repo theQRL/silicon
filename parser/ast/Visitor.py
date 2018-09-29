@@ -2,9 +2,9 @@ from antlr4.ParserRuleContext import ParserRuleContext
 from gen.siliconLexer import siliconLexer
 from gen.siliconParser import siliconParser
 from gen.siliconParserVisitor import siliconParserVisitor
-from Parser.Scope import Scope
-from Parser.ReturnValue import ReturnValue
-from Parser.SiliconValue import SiliconValue
+from parser.Scope import Scope
+from parser.ReturnValue import ReturnValue
+from parser.SiliconValue import SiliconValue
 
 
 class Visitor(siliconParserVisitor):

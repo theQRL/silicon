@@ -1,7 +1,7 @@
-from Parser.AST.Visitor import Visitor
-from Parser.Scope import Scope
-from Parser.SiliconValue import SiliconValue
-from Parser.ReturnValue import ReturnValue
+from parser.ast.Visitor import Visitor
+from parser.Scope import Scope
+from parser.SiliconValue import SiliconValue
+from parser.ReturnValue import ReturnValue
 
 
 class Function:

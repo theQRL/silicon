@@ -1,7 +1,7 @@
 from gen.siliconParser import siliconParser
 from gen.siliconParserVisitor import siliconParserVisitor
-from Parser.Function import Function
-from Parser.SiliconValue import SiliconValue
+from parser.Function import Function
+from parser.SiliconValue import SiliconValue
 
 
 class SymbolVisitor(siliconParserVisitor):
