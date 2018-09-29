@@ -1,4 +1,14 @@
-a=10
-b=20
-c=30
-d=a+b*c
+def fib(f, s, count)
+{
+    if(count == 0)
+    {
+        return 0
+    }
+    n = f + s
+    f = s
+    s = n
+    fib(f, s, count - 1)
+    println(s)
+}
+
+fib(0, 1, 10)
