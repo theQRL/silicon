@@ -1,1 +1,1 @@
-# Silicon - The QRL Smart Contract
+# Silicon - The QRL Smart Contract Language
