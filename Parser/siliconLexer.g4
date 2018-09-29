@@ -1,28 +1,78 @@
 lexer grammar siliconLexer;
 
+Println     : 'println';
+Print       : 'print';
+Input       : 'input';
+Def         : 'def';
+If          : 'if';
+Else        : 'else';
+Return      : 'return';
+For         : 'for';
+While       : 'while';
+To          : 'to';
+Do          : 'do';
+End         : 'end';
+In          : 'in';
+Null        : 'null';
+
+Or          : '||';
+And         : '&&';
+Equals      : '==';
+NEquals     : '!=';
+GTEquals    : '>=';
+LTEquals    : '<=';
+Pow         : '^';
+Excl        : '!';
+GT          : '>';
+LT          : '<';
+Add         : '+';
+Subtract    : '-';
+Multiply    : '*';
+Divide      : '/';
+Modulus     : '%';
+OBrace      : '{';
+CBrace      : '}';
+OBracket    : '[';
+CBracket    : ']';
+OParen      : '(';
+CParen      : ')';
+SColon      : ';';
+Assign      : '=';
+Comma       : ',';
+QMark       : '?';
+Colon       : ':';
+
+Bool
+ : 'true'
+ | 'false'
+ ;
+
 Number
-  : Digit+ ;
-
-fragment
-IdentifierStart
-  : [a-zA-Z_] ;
-
-fragment
-IdentifierPart
-  : [a-zA-Z0-9_] ;
-
-fragment
-Digit
-  : [0-9] ;
+ : Int ( '.' Digit* )?
+ ;
 
 Identifier
-  : IdentifierStart IdentifierPart* ;
+ : [a-zA-Z_] [a-zA-Z_0-9]*
+ ;
 
-BinaryOp
-  : '+' | '-' | '*' | '/' ;
+String
+ : ["] ( ~["\r\n\\] | '\\' ~[\r\n] )* ["]
+ | ['] ( ~['\r\n\\] | '\\' ~[\r\n] )* [']
+ ;
 
-AssignmentOp
-  : '=' ;
+Comment
+ : ( '//' ~[\r\n]* | '/*' .*? '*/' ) -> skip
+ ;
 
-WS
-  : [ \t\r\n\u000C]+ -> skip ;
+Space
+ : [ \t\r\n\u000C] -> skip
+ ;
+
+fragment Int
+ : [1-9] Digit*
+ | '0'
+ ;
+
+fragment Digit
+ : [0-9]
+ ;
