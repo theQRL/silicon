@@ -2,6 +2,13 @@ z = 1
 a = z + 5
 
 if (a>=5)
-    hello = 25
+{
+    a = a * a
+}
 else
-    bye = 58.62
+{
+    z = z * a
+}
+
+println(z)
+println(a)
