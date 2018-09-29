@@ -1,3 +1,4 @@
+import sys
 import antlr4
 
 from gen.siliconLexer import siliconLexer
@@ -8,7 +9,12 @@ from parser.ast.Visitor import Visitor
 from parser.SymbolVisitor import SymbolVisitor
 
 
-code = antlr4.FileStream("sample.sil")
+if len(sys.argv) < 2:
+    print("Missing Filename")
+    sys.exit(0)
+
+filename = sys.argv[1]
+code = antlr4.FileStream(filename)
 lexer = siliconLexer(code)
 stream = antlr4.CommonTokenStream(lexer)
 parser = siliconParser(stream)
